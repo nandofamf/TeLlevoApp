@@ -1,0 +1,37 @@
+<!-- app.component.html -->
+
+<!-- Menú lateral -->
+<ion-menu contentId="main-content" side="start" menuId="first" type="overlay" style="--background: #001F3F;">
+  <ion-header>
+    <ion-toolbar style="--background: #001F3F;"> 
+      <ion-title style="color: black;">Menú</ion-title> 
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item button routerLink="/pasajero">
+        <ion-icon name="car" slot="start" style="color: rgb(255, 255, 255);"></ion-icon>
+        <ion-label style="color: rgb(252, 252, 252);">Pasajero</ion-label> 
+      </ion-item>
+      
+      <ion-item button routerLink="/perfil">
+        <ion-icon name="person-circle-outline" slot="start" style="color: rgb(255, 255, 255);"></ion-icon>
+        <ion-label style="color: rgb(255, 255, 255);">Perfil</ion-label>
+      </ion-item>
+
+
+      <ion-item button>
+        <ion-icon name="time-outline" slot="start" style="color: rgb(255, 255, 255);"></ion-icon>
+        <ion-label style="color: rgb(255, 255, 255);">Historial de solicitudes</ion-label> 
+      </ion-item>
+      
+      <ion-item button routerLink="/conductor"> 
+        <ion-icon name="person-outline" slot="start" style="color: rgb(255, 255, 255);"></ion-icon> 
+        <ion-label style="color: rgb(255, 255, 255);">Conductor</ion-label> 
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>

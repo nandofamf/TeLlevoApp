@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="dark"> 
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/role-selection"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Pasajero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar placeholder="Ingresa tu destino" [(ngModel)]="destinoBusqueda" (ionInput)="buscarViajes()"></ion-searchbar>
+
+  <ion-list *ngIf="viajesFiltrados.length > 0">
+    <ion-item *ngFor="let viaje of viajesFiltrados" (click)="solicitarViaje(viaje)">
+      <ion-label>
+        <h2>{{ viaje.conductorNombre }}</h2>
+        <p>Destino: {{ viaje.destino }}</p>
+        <p>Hora de Salida: {{ viaje.horaSalida }}</p>
+        <p>Capacidad: {{ viaje.asientosDisponibles }}/{{ viaje.capacidadTotal }}</p>
+        <p>Tarifa: ${{ viaje.costoPorPersona }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-text color="medium" *ngIf="viajesFiltrados.length === 0 && destinoBusqueda.length > 0">
+    No hay viajes disponibles para este destino.
+  </ion-text>
+</ion-content>

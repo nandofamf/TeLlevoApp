@@ -1,0 +1,13 @@
+:root {
+  // Primary color - Blue
+  --ion-color-primary: #bcd6f0;
+  --ion-color-primary-rgb: 0,123,255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #001F3F;
+  --ion-color-primary-tint: #001F3F;
+
+  // You can also update other related colors if you want a consistent blue theme
+  --ion-color-secondary: #6c757d; // Secondary color example (grayish tone)
+  --ion-color-tertiary: #001F3F; // Tertiary color example (a bluish-green tone)
+}

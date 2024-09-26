@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/role-selection"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #001F3F;">
+  <div class="profile-container">
+    <ion-icon name="person-outline" class="profile-icon"></ion-icon>
+
+    <h2 class="profile-name">{{usuario.username}}, {{usuario.edad}}</h2>
+    <p class="profile-email">{{usuario.email}}</p>
+
+    <ion-button expand="block" color="success" class="edit-button" (click)="editarPerfil()">
+      <ion-icon name="create-outline" slot="start"></ion-icon>
+      Editar Perfil
+    </ion-button>
+  </div>
+</ion-content>

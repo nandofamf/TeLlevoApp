@@ -1,0 +1,37 @@
+<ion-content class="ion-padding" color="dark">
+  <div class="form-slide" style="text-align: center;">
+    <img src="assets/logo.png" alt="DriverMe Logo" class="logo-image" />
+
+    <h3 class="title">Ingresa tu Número Telefónico</h3>
+    <form #formulario="ngForm" (ngSubmit)="onPhoneSubmit()">
+      <ion-item lines="none">
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label style="color: white;">+569</ion-label>
+        <ion-input
+          required
+          type="tel"
+          pattern="[0-9]{8}"
+          labelPlacement="floating"
+          [(ngModel)]="usr.phoneNumber"
+          name="phoneNumber"
+          placeholder="12345678"
+          maxlength="8"> <!-- Establece un límite de 8 caracteres -->
+        </ion-input>
+      </ion-item>
+
+      <!-- El botón se deshabilitará si el formulario no es válido -->
+      <ion-button 
+        expand="block" 
+        color="primary" 
+        type="submit" 
+        [disabled]="formulario.invalid || usr.phoneNumber.length !== 8">
+        Ingresar
+      </ion-button>
+    </form>
+
+    <ion-item lines="none">
+      <p>¿No tienes una cuenta? <a routerLink="/register"> Regístrate</a></p>
+    </ion-item>
+    
+  </div>
+</ion-content>

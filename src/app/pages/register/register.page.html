@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="" icon="arrow-back-outline" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Crear Cuenta</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form #registerForm="ngForm" (ngSubmit)="onRegisterSubmit()">
+        <ion-item>
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <ion-input
+            type="tel"
+            required
+            pattern="^[0-9]{8}$"
+            [(ngModel)]="registerData.phoneNumber"
+            name="phoneNumber"
+            placeholder="Número Telefónico">
+          </ion-input>
+        </ion-item>
+        <ion-note *ngIf="!registerForm.controls['phoneNumber']?.valid && registerForm.controls['phoneNumber']?.touched" color="danger">
+          El número telefónico debe contener 8 dígitos.
+        </ion-note>
+
+        <ion-item>
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-input
+            type="text"
+            required
+            [(ngModel)]="registerData.name"
+            name="name"
+            placeholder="Nombre Completo">
+          </ion-input>
+        </ion-item>
+        <ion-note *ngIf="!registerForm.controls['name']?.valid && registerForm.controls['name']?.touched" color="danger">
+          El nombre es obligatorio.
+        </ion-note>
+
+        <ion-item>
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-input
+            type="email"
+            required
+            pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+            [(ngModel)]="registerData.email"
+            name="email"
+            placeholder="Correo Electrónico">
+          </ion-input>
+        </ion-item>
+        <ion-note *ngIf="!registerForm.controls['email']?.valid && registerForm.controls['email']?.touched" color="danger">
+          Por favor ingresa un correo electrónico válido.
+        </ion-note>
+
+        <ion-button expand="block" type="submit" color="primary" shape="round" class="custom-button" [disabled]="registerForm.invalid">
+          <ion-icon slot="start" name="checkmark-circle-outline"></ion-icon>
+          Registrarse
+        </ion-button>
+        
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

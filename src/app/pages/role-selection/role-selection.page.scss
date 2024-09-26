@@ -1,0 +1,52 @@
+/* Estilo para el título de la página */
+ion-title {
+    color: #000 !important; /* Forzar que el color del título sea negro */
+    text-align: center; /* Asegurarnos de que esté centrado */
+  }
+  
+  /* Estilo para los iconos en el ion-toolbar */
+  ion-toolbar ion-icon {
+    color: #000 !important; /* Color negro para los iconos */
+  }
+  
+  /* Estilo para los textos dentro de ion-item */
+  ion-item {
+    color: #000 !important; /* Forzar que el texto dentro de ion-item sea negro */
+  }
+  
+  /* Estilo para el contenido de los ion-label dentro de ion-item */
+  ion-label h2, ion-label p {
+    color: #000 !important; /* Forzar que el texto dentro de ion-label sea negro */
+  }
+  
+  /* Estilo para el icono dentro de los botones */
+  ion-button ion-icon {
+    color: #ffffff !important; /* Color negro para los iconos de los botones */
+  }
+  
+  /* Estilo para los iconos de los conductores */
+  ion-avatar img {
+    border: 1px solid #ffffff; /* Opcional: puedes agregar un borde negro alrededor de la imagen del conductor */
+  }
+
+  /* src/app/pages/role-selection/role-selection.page.scss */
+
+ion-menu {
+  --width: 280px; /* Ancho del menú lateral */
+}
+
+ion-item {
+  --color: white; /* Color del texto */
+}
+
+ion-avatar {
+  background: #ccc; /* Fondo del avatar */
+}
+
+ion-content {
+  --background: #1e1e1e; /* Color de fondo del contenido principal */
+}
+
+ 
+
+

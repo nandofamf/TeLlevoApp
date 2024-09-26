@@ -1,19 +1,19 @@
 
 ion-content {
-    --background: #6d72ef; /* Fondo oscuro general */
+    --background: #6d72ef;
   
     .form-slide {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Altura completa para centrar verticalmente */
+      height: 100vh; 
       text-align: center;
-      font-family: 'Roboto', sans-serif; /* Cambia la fuente */
+      font-family: 'Roboto', sans-serif; 
     }
   
     ion-button {
-      color: black !important; /* Cambia el color del texto a negro */
+      color: black !important; 
     }
     .title {
       color: #060505;

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TipoConducPasajPageRoutingModule } from './tipo-conduc-pasaj-routing.module';
+import { HistorialPageRoutingModule } from './historial-routing.module';
 
-import { TipoConducPasajPage } from './tipo-conduc-pasaj.page';
+import { HistorialPage } from './historial.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TipoConducPasajPageRoutingModule
+    HistorialPageRoutingModule
   ],
-  declarations: [TipoConducPasajPage]
+  declarations: [HistorialPage]
 })
-export class TipoConducPasajPageModule {}
+export class HistorialPageModule {}

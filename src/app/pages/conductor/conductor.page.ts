@@ -15,7 +15,7 @@ export class ConductorPage {
   constructor() {}
 
   programarViaje() {
-    // Aquí iría la lógica para almacenar el viaje en la base de datos.
+
     console.log('Viaje programado:', {
       partida: this.partida,
       destino: this.destino,

@@ -1,50 +1,48 @@
 ion-item {
-    --background: #eee8e8; /* Fondo blanco para que el ítem sea más visible */
-    --border-color: #000000; /* Color de borde */
-    --padding-start: 10px; /* Espaciado al inicio */
-    border-radius: 8px; /* Bordes redondeados */
-    margin-bottom: 10px; /* Espacio entre los campos */
+    --background: #eee8e8; 
+    --border-color: #000000; 
+    --padding-start: 10px; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
   }
   
   ion-input {
-    color: #000; /* Asegura que el texto dentro del input sea negro */
+    color: #000; 
   }
   
   ion-icon {
-    color: #000000; /* Asegura que el color del icono sea visible */
+    color: #000000; 
   }
   
   ion-button {
-    --color: #ffffff; /* Cambia el color del texto a negro */
-    --background: #28a745; /* Mantiene el color de fondo del botón (color success) */
+    --color: #ffffff; 
+    --background: #28a745; 
   }
 
   ion-button ion-icon {
-    color: #28a745; /* Cambia el color del icono a verde */
+    color: #28a745;
   }
 
-  /* register.page.scss */
-
-/* Aplica estilos al botón de registro */
+  
 .custom-button {
-  --background: #4caf50; /* Cambia el fondo del botón a verde */
-  --border-radius: 20px; /* Hace el botón más redondeado */
-  --padding-start: 15px; /* Agrega espacio interno al principio del botón */
-  --padding-end: 15px;   /* Agrega espacio interno al final del botón */
-  --color: #110909;         /* Asegúrate de que el texto se mantenga blanco */
-  --box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Agrega sombra al botón */
-  font-weight: bold;     /* Hace que el texto del botón sea más grueso */
-  text-transform: uppercase; /* Transforma el texto a mayúsculas */
-  transition: transform 0.3s ease; /* Añade una animación suave al hacer hover */
+  --background: #4caf50;
+  --border-radius: 20px; 
+  --padding-start: 15px;
+  --padding-end: 15px;  
+  --color: #110909;       
+  --box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  font-weight: bold;   
+  text-transform: uppercase; 
+  transition: transform 0.3s ease; 
 }
 
 .custom-button:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al hacer hover */
-  --box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Intensifica la sombra al hacer hover */
+  transform: scale(1.05); 
+  --box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); 
 }
 
-/* Cambia el color del icono dentro del botón a blanco */
+
 .custom-button ion-icon {
   color: #000000;
-  margin-right: 8px; /* Añade espacio entre el icono y el texto */
+  margin-right: 8px; 
 }

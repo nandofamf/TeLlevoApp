@@ -1,4 +1,4 @@
-// app.component.ts
+ 
 
 import { Component } from '@angular/core';
 import { MenuController, Platform } from '@ionic/angular';
@@ -16,10 +16,10 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Escuchar los cambios de ruta
+       
       this.router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
-          // Deshabilita el menú en 'home' y 'registro'
+          
           if (event.url === '/home' || event.url === '/register') {
             this.menuCtrl.enable(false, 'first');
           } else {
@@ -28,5 +28,10 @@ export class AppComponent {
         }
       });
     });
+  }
+
+   
+  closeMenu() {
+    this.menuCtrl.close('first');
   }
 }

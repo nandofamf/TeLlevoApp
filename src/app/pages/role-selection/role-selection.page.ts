@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./role-selection.page.scss'],
 })
 export class RoleSelectionPage implements OnInit {
-  searchQuery: string = ''; // Almacena el valor de la búsqueda
-  filteredDestinations: any[] = []; // Array para las direcciones filtradas
-  selectedDestination: any = null; // Almacena el destino seleccionado
-  availableDrivers: any[] = []; // Lista de conductores disponibles
+  searchQuery: string = '';  
+  filteredDestinations: any[] = [];  
+  selectedDestination: any = null;  
+  availableDrivers: any[] = [];  
 
   // Lista completa de destinos
   allDestinations: any[] = [
@@ -33,7 +33,7 @@ export class RoleSelectionPage implements OnInit {
 
   ngOnInit() {}
 
-  // Método para buscar direcciones
+   
   buscarDirecciones(event: any) {
     const query = event.target.value.toLowerCase();
     if (query.trim() === '') {
@@ -45,14 +45,14 @@ export class RoleSelectionPage implements OnInit {
     );
   }
 
-  // Método para seleccionar un destino
+   
   seleccionarDestino(destino: any) {
     this.selectedDestination = destino;
     this.filteredDestinations = [];
     this.obtenerConductoresDisponibles();
   }
 
-  // Obtener conductores disponibles
+   
   obtenerConductoresDisponibles() {
     this.availableDrivers = this.allDrivers.filter(driver => driver.capacidadTotal > driver.asientosOcupados);
   }

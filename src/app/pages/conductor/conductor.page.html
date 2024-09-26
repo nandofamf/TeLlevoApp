@@ -1,40 +1,40 @@
 <ion-header>
-  <ion-toolbar color="dark"> <!-- Cambia el color del toolbar a oscuro o el que prefieras -->
+  <ion-toolbar color="dark"> 
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/role-selection"></ion-back-button> <!-- Botón para volver atrás -->
+      <ion-back-button defaultHref="/role-selection"></ion-back-button> 
     </ion-buttons>
     <ion-title>Conductor</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <!-- Contenido de la página del conductor -->
+
   <form (ngSubmit)="programarViaje()">
-    <ion-item>
+    <ion-item class="rounded-item">
       <ion-label position="stacked">Lugar de Partida</ion-label>
       <ion-input [(ngModel)]="partida" name="partida" required></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="rounded-item">
       <ion-label position="stacked">Destino</ion-label>
       <ion-input [(ngModel)]="destino" name="destino" required></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="rounded-item">
       <ion-label position="stacked">Hora de Salida</ion-label>
       <ion-datetime displayFormat="h:mm A" [(ngModel)]="horaSalida" name="horaSalida" required></ion-datetime>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="rounded-item">
       <ion-label position="stacked">Capacidad del Vehículo</ion-label>
       <ion-input type="number" [(ngModel)]="capacidadTotal" name="capacidadTotal" required></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="rounded-item">
       <ion-label position="stacked">Costo por Persona</ion-label>
       <ion-input type="number" [(ngModel)]="costoPorPersona" name="costoPorPersona" required></ion-input>
     </ion-item>
 
-    <ion-button expand="full" type="submit">Programar Viaje</ion-button>
+    <ion-button expand="full" type="submit" class="rounded-button">Programar Viaje</ion-button>
   </form>
 </ion-content>

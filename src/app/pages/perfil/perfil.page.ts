@@ -31,19 +31,19 @@ export class PerfilPage {
         {
           name: 'username',
           type: 'text',
-          placeholder: 'Nombre', // Placeholder para el campo de nombre
+          placeholder: 'Nombre',
           value: this.usuario.username
         },
         {
           name: 'edad',
           type: 'number',
-          placeholder: 'Edad', // Placeholder para el campo de edad
+          placeholder: 'Edad',
           value: this.usuario.edad
         },
         {
           name: 'email',
           type: 'email',
-          placeholder: 'Correo', // Placeholder para el campo de correo
+          placeholder: 'Correo',
           value: this.usuario.email
         }
       ],
@@ -69,5 +69,10 @@ export class PerfilPage {
     });
 
     await alert.present();
+  }
+
+  cerrarSesion() {
+    // Lógica para cerrar sesión, puedes limpiar datos de usuario si es necesario
+    this.router.navigate(['/home']); // Redirige a la página de inicio (home)
   }
 }

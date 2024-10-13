@@ -1,42 +1,23 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="dark"> 
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/role-selection"></ion-back-button>
+      <ion-back-button defaultHref="/role-selection"></ion-back-button> 
     </ion-buttons>
     <ion-title>Pasajero</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <!-- Barra de búsqueda de direcciones -->
-  <ion-searchbar 
-    [(ngModel)]="searchQuery" 
-    (ionInput)="buscarDirecciones($event)" 
-    placeholder="Ingresa tu destino">
-  </ion-searchbar>
-
-  <!-- Lista de sugerencias de direcciones -->
-  <ion-list *ngIf="filteredDestinations.length > 0">
-    <ion-item *ngFor="let destino of filteredDestinations" (click)="seleccionarDestino(destino)">
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let oferta of ofertas">
       <ion-label>
-        <h2>{{ destino.nombre }}</h2>
-        <p>{{ destino.descripcion }}</p>
+        <h2>{{ oferta.partida }} -> {{ oferta.destino }}</h2>
+        <p>Hora de salida: {{ oferta.horaSalida }}</p>
+        <p>Capacidad Total: {{ oferta.capacidadTotal }}</p>
+        <p>Costo por persona: {{ oferta.costoPorPersona }}</p>
+        <p>Cupos ocupados: {{ oferta.asientosOcupados }} / {{ oferta.capacidadTotal }}</p>
       </ion-label>
-    </ion-item>
-  </ion-list>
-
-  <!-- Mapa -->
-  <div id="mapId" style="height: 400px; margin-top: 10px;"></div>
-
-  <!-- Solicitudes de viaje -->
-  <ion-list *ngIf="solicitudes.length > 0" style="margin-top: 10px;">
-    <ion-item *ngFor="let solicitud of solicitudes">
-      <ion-label>
-        <h2>{{ solicitud.destino }}</h2>
-        <p>Hora de salida: {{ solicitud.hora }}</p>
-        <p>Conductor: {{ solicitud.conductor }}</p>
-        <p>Costo: {{ solicitud.costo }}</p>
-      </ion-label>
+      <ion-button fill="outline" (click)="tomarOferta(oferta)">Tomar</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
